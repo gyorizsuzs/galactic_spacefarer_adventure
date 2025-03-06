@@ -20,7 +20,6 @@
         "uri": "/odata/v4/spacefarer/",
         "type": "OData",
         "settings": {
-          "annotations": [],
           "odataVersion": "4.0"
         }
       }
@@ -60,7 +59,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "galactic.adventures.galacticspacefareradventures.i18n.i18n"
+          "bundleName": "galactic_spacefarer_adventures.i18n.i18n"
         }
       },
       "": {
@@ -71,10 +70,6 @@
           "autoExpandSelect": true,
           "earlyRequests": true
         }
-      },
-      "@i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "uri": "i18n/i18n.properties"
       }
     },
     "resources": {
@@ -114,28 +109,52 @@
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
                     "type": "ResponsiveTable",
-                    "enableAutoColumnWidth": true,
+                    "enableAutoColumnWidth": false,
                     "showFullScreenButton": true
                   },
                   "filters": {
                     "defaultFilterMode": "liveMode"
                   },
                   "columns": {
-                    "name": {
-                      "label": "Name",
+                    "fullName": {
+                      "label": "{{fullName}}",
                       "position": 10,
                       "filterable": true,
                       "sortable": true
                     },
                     "originPlanet": {
-                      "label": "Origin Planet",
+                      "label": "{{originPlanet}}",
                       "position": 20,
                       "filterable": true,
                       "sortable": true
                     },
-                    "rank": {
-                      "label": "Rank",
+                    "stardustCollection": {
+                      "label": "{{stardustCollection}}",
                       "position": 30,
+                      "filterable": true,
+                      "sortable": true
+                    },
+                    "wormholeNavigationSkill": {
+                      "label": "{{wormholeNavigationSkill}}",
+                      "position": 40,
+                      "filterable": true,
+                      "sortable": true
+                    },
+                    "spacesuitColour": {
+                      "label": "{{spacesuitColour}}",
+                      "position": 50,
+                      "filterable": true,
+                      "sortable": true
+                    },
+                    "department": {
+                      "label": "{{department}}",
+                      "position": 60,
+                      "filterable": true,
+                      "sortable": true
+                    },
+                    "position": {
+                      "label": "{{position}}",
+                      "position": 70,
                       "filterable": true,
                       "sortable": true
                     }
