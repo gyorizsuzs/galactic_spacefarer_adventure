@@ -1,23 +1,23 @@
-// using { sap, managed } from '@sap/cds/common';
+using { managed } from '@sap/cds/common';
 namespace galactic.adventures;
 
-entity GalacticSpacefarers {
-    key ID : UUID;
-    fullName : String(100);
-    originPlanet : String(50);
-    stardustCollection : Integer;
-    wormholeNavigationSkill : Integer;
-    spacesuitColour : String(30);
-    department : Association to IntergalacticDepartments;
-    position : Association to SpacefaringPositions;
+entity GalacticSpacefarers : managed {
+    key ID : UUID @cuid;
+    fullName : String(100) @title : '{i18n>fullName}';
+    originPlanet : String(50) @title : '{i18n>originPlanet}';
+    stardustCollection : Integer @title : '{i18n>stardustCollection}';
+    wormholeNavigationSkill : Integer @title : '{i18n>wormholeNavigationSkill}';
+    spacesuitColour : String(30) @title : '{i18n>spacesuitColour}';
+    department : Association to IntergalacticDepartments @title : '{i18n>departmentName}';
+    position : Association to SpacefaringPositions @title : '{i18n>positionTitle}';
 }
 
-entity IntergalacticDepartments {
-    key ID : UUID;
-    name : String(50);
+entity IntergalacticDepartments : managed {
+    key ID : UUID @cuid;
+    name : String(50) @title : '{i18n>department}';
 }
 
-entity SpacefaringPositions {
-    key ID : UUID;
-    title : String(50);
+entity SpacefaringPositions : managed {
+    key ID : UUID @cuid;
+    title : String(50) @title : '{i18n>position}';
 }

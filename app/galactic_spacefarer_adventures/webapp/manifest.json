@@ -48,7 +48,8 @@
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
-        "sap.fe.templates": {}
+        "sap.fe.templates": {},
+        "sap.f": {}
       }
     },
     "contentDensities": {
@@ -76,17 +77,28 @@
       "css": []
     },
     "routing": {
-      "config": {},
+      "config": {
+        "flexibleColumnLayout": {
+          "defaultTwoColumnLayoutType": "TwoColumnsMidExpanded",
+          "defaultThreeColumnLayoutType": "ThreeColumnsMidExpanded"
+        },
+        "routerClass": "sap.f.routing.Router"
+      },
       "routes": [
         {
           "pattern": ":?query:",
           "name": "GalacticSpacefarersList",
-          "target": "GalacticSpacefarersList"
+          "target": [
+            "GalacticSpacefarersList"
+          ]
         },
         {
           "pattern": "GalacticSpacefarers({key}):?query:",
           "name": "GalacticSpacefarersObjectPage",
-          "target": "GalacticSpacefarersObjectPage"
+          "target": [
+            "GalacticSpacefarersList",
+            "GalacticSpacefarersObjectPage"
+          ]
         }
       ],
       "targets": {
@@ -109,8 +121,18 @@
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
                     "type": "ResponsiveTable",
+                    "growingTreshold": 10,
+                    "growingMode": "Scroll",
                     "enableAutoColumnWidth": false,
-                    "showFullScreenButton": true
+                    "showFullScreenButton": true,
+                    "personalization": {
+                      "filter": true,
+                      "column": true,
+                      "sort": true
+                    },
+                    "quickVariantSelection": {
+                      "showCounts": true
+                    }
                   },
                   "filters": {
                     "defaultFilterMode": "liveMode"
@@ -158,11 +180,21 @@
                       "filterable": true,
                       "sortable": true
                     }
+                  },
+                  "actions": {
+                    "DataFieldForAction::SpacefarerService.EntityContainer::CreateSpacefarer": {
+                      "afterExecution": {
+                        "enableAutoScroll": true
+                      }
+                    }
                   }
                 }
-              }
+              },
+              "initialLoad": "Enabled"
             }
-          }
+          },
+          "controlAggregation": "beginColumnPages",
+          "contextPattern": ""
         },
         "GalacticSpacefarersObjectPage": {
           "type": "Component",
@@ -170,12 +202,27 @@
           "name": "sap.fe.templates.ObjectPage",
           "options": {
             "settings": {
-              "editableHeaderContent": false,
-              "contextPath": "/GalacticSpacefarers"
+              "editableHeaderContent": true,
+              "contextPath": "/GalacticSpacefarers",
+              "viewLevel": 2,
+              "content": {
+                "header": {
+                  "anchorBarVisible": true
+                }
+              },
+              "sectionLayout": "Tabs"
             }
-          }
+          },
+          "controlAggregation": "midColumnPages",
+          "contextPattern": "/GalacticSpacefarers({key})"
         }
       }
+    },
+    "rootView": {
+      "viewName": "sap.fe.templates.RootContainer.view.Fcl",
+      "type": "XML",
+      "async": true,
+      "id": "appRootView"
     }
   },
   "sap.fiori": {
