@@ -1,6 +1,7 @@
 using SpacefarerService as service from '../../srv/service';
 
 annotate service.GalacticSpacefarers with @(
+    odata.draft.enabled : true,
     UI.FieldGroup #GeneratedGroup: {
         $Type: 'UI.FieldGroupType',
         Data : [
@@ -8,7 +9,6 @@ annotate service.GalacticSpacefarers with @(
                 $Type: 'UI.DataField',
                 Label: '{i18n>fullName}',
                 Value: fullName,
-                ![@UI.Hidden],
             },
             {
                 $Type: 'UI.DataField',
@@ -83,11 +83,6 @@ annotate service.GalacticSpacefarers with @(
             $Type: 'UI.DataField',
             Label: '{i18n>spacesuitColour}',
             Value: spacesuitColour,
-        },
-        {
-            $Type : 'UI.DataFieldForAction',
-            Action: 'SpacefarerService.EntityContainer/CreateSpacefarer',
-            Label : '{i18n>createNewSpacefarer}'
         },
     ],
     UI.SelectionPresentationVariant #table : {

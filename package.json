@@ -19,6 +19,14 @@
     "start": "cds-serve",
     "watch-galactic_spacefarer_adventures": "cds watch --open galactic_spacefarer_adventures/webapp/index.html?sap-ui-xx-viewCache=false"
   },
+  "cds": {
+    "query": {
+      "limit": {
+        "default": 10,
+        "max": 20
+      }
+    }
+  },
   "sapux": [
     "app/galactic_spacefarer_adventures"
   ]

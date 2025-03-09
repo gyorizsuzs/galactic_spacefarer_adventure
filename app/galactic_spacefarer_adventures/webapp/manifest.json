@@ -121,17 +121,14 @@
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
                     "type": "ResponsiveTable",
-                    "growingTreshold": 10,
                     "growingMode": "Scroll",
+                    "growingTreshold": 10,
                     "enableAutoColumnWidth": false,
                     "showFullScreenButton": true,
                     "personalization": {
                       "filter": true,
                       "column": true,
                       "sort": true
-                    },
-                    "quickVariantSelection": {
-                      "showCounts": true
                     }
                   },
                   "filters": {
@@ -179,13 +176,6 @@
                       "position": 70,
                       "filterable": true,
                       "sortable": true
-                    }
-                  },
-                  "actions": {
-                    "DataFieldForAction::SpacefarerService.EntityContainer::CreateSpacefarer": {
-                      "afterExecution": {
-                        "enableAutoScroll": true
-                      }
                     }
                   }
                 }
