@@ -17,6 +17,6 @@ npm install
 cd ../../
 cds watch
 
-3. Authorisation
+3. Authentication
 
-Authorisation is currently mocked
+Authentication is currently mocked
