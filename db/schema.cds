@@ -21,5 +21,3 @@ entity SpacefaringPositions : managed {
     key ID : UUID @cuid;
     title : String(50) @title : '{i18n>position}';
 }
-
-// annotate GalacticSpacefarers with @odata.draft.enabled;

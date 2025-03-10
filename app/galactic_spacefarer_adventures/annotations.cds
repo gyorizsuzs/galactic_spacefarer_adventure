@@ -1,8 +1,8 @@
 using SpacefarerService as service from '../../srv/service';
 
 annotate service.GalacticSpacefarers with @(
-    odata.draft.enabled : true,
-    UI.FieldGroup #GeneratedGroup: {
+    odata.draft.enabled                   : true,
+    UI.FieldGroup #GeneratedGroup         : {
         $Type: 'UI.FieldGroupType',
         Data : [
             {
@@ -42,13 +42,13 @@ annotate service.GalacticSpacefarers with @(
             },
         ],
     },
-    UI.Facets                    : [{
+    UI.Facets                             : [{
         $Type : 'UI.ReferenceFacet',
         ID    : 'GeneratedFacet1',
         Label : '{i18n>generalInformation}',
         Target: '@UI.FieldGroup#GeneratedGroup',
     }, ],
-    UI.LineItem                  : [
+    UI.LineItem                           : [
         {
             $Type: 'UI.DataField',
             Label: '{i18n>fullName}',
@@ -85,82 +85,92 @@ annotate service.GalacticSpacefarers with @(
             Value: spacesuitColour,
         },
     ],
-    UI.SelectionPresentationVariant #table : {
-        $Type : 'UI.SelectionPresentationVariantType',
-        PresentationVariant : {
-            $Type : 'UI.PresentationVariantType',
-            Visualizations : [
-                '@UI.LineItem',
-            ],
+    UI.HeaderInfo                         : {
+        Title         : {
+            $Type: 'UI.DataField',
+            Value: fullName,
         },
-        SelectionVariant : {
-            $Type : 'UI.SelectionVariantType',
-            SelectOptions : [
-            ],
+        TypeName      : '{i18n>Spacefarer}',
+        TypeNamePlural: '{i18n>Spacefarers}',
+        Description   : {
+            $Type: 'UI.DataField',
+            Value: position_ID,
         },
     },
-    UI.HeaderInfo : {
-        Title : {
-            $Type : 'UI.DataField',
-            Value : fullName,
-        },
-        TypeName : '',
-        TypeNamePlural : '',
-        Description : {
-            $Type : 'UI.DataField',
-            Value : position_ID,
-        },
-    },
-    UI.SelectionFields : [
+    UI.SelectionFields                    : [
         originPlanet,
         position_ID,
+        department_ID,
         spacesuitColour,
         stardustCollection,
     ],
+UI.DeleteHidden : true,
 );
 
 annotate service.GalacticSpacefarers with {
-    department @(
-        Common.Text: department.name,
-        Common.TextArrangement: #TextOnly,
-        Common.ValueListWithFixedValues: true,
-        Common.ValueList               : {
-            Label         : '{i18n>department}',
-            CollectionPath: 'IntergalacticDepartments',
-            Parameters    : [
-                {
-                    $Type            : 'Common.ValueListParameterInOut',
-                    LocalDataProperty: 'department_ID',
-                    ValueListProperty: 'ID'
-                },
-                {
-                    $Type            : 'Common.ValueListParameterDisplayOnly',
-                    ValueListProperty: 'name'
-                }
-            ]
-        },
-    )
+    originPlanet @Common.Label : '{i18n>originPlanet}'
+};
+
+annotate service.GalacticSpacefarers with {
+    spacesuitColour @Common.Label : '{i18n>spacesuitColour}'
+};
+
+annotate service.GalacticSpacefarers with {
+    stardustCollection @Common.Label : '{i18n>stardustCollection}'
 };
 
 annotate service.GalacticSpacefarers with {
     position @(
-        Common.Text: position.title,
-        Common.TextArrangement: #TextOnly,
-        Common.ValueListWithFixedValues: true,
-        Common.ValueList               : {
-            Label         : '{i18n>position}',
-            CollectionPath: 'SpacefaringPositions',
-            Parameters    : [
+        Common.Text : {
+            $value : position.title,
+            ![@UI.TextArrangement] : #TextOnly
+        },
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'SpacefaringPositions',
+            Parameters : [
                 {
-                    $Type            : 'Common.ValueListParameterInOut',
-                    LocalDataProperty: 'position_ID',
-                    ValueListProperty: 'ID'
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : position_ID,
+                    ValueListProperty : 'ID',
                 },
+            ],
+        },
+        Common.ValueListWithFixedValues : true,
+    )
+};
+
+annotate service.SpacefaringPositions with {
+    ID @Common.Text : {
+        $value : title,
+        ![@UI.TextArrangement] : #TextOnly,
+    }
+};
+
+annotate service.GalacticSpacefarers with {
+    department @(
+        Common.Text : {
+            $value : department.name,
+            ![@UI.TextArrangement] : #TextOnly
+        },
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'IntergalacticDepartments',
+            Parameters : [
                 {
-                    $Type            : 'Common.ValueListParameterDisplayOnly',
-                    ValueListProperty: 'title'
-                }
-            ]
-        }
-    );
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : department_ID,
+                    ValueListProperty : 'ID',
+                },
+            ],
+        },
+        Common.ValueListWithFixedValues : true,
+    )
+};
+
+annotate service.IntergalacticDepartments with {
+    ID @Common.Text : {
+        $value : name,
+        ![@UI.TextArrangement] : #TextOnly,
+    }
 };

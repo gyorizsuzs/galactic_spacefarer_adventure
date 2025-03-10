@@ -1,7 +1,6 @@
 using {galactic.adventures as my} from '../db/schema';
 
-service SpacefarerService 
-@(restrict: [
+service SpacefarerService @(restrict: [
     {
         grant: 'READ',
         to   : 'authenticated-user',
@@ -11,13 +10,8 @@ service SpacefarerService
         grant: '*',
         to   : 'admin'
     }
-]) 
-{
-    entity GalacticSpacefarers      as
-        projection on my.GalacticSpacefarers {
-            *
-        };
-
+]) {
+    entity GalacticSpacefarers      as projection on my.GalacticSpacefarers;
     entity IntergalacticDepartments as projection on my.IntergalacticDepartments;
     entity SpacefaringPositions     as projection on my.SpacefaringPositions;
 }

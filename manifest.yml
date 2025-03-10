@@ -1,0 +1,20 @@
+---
+applications:
+- name: "galactic_spacefarer_adventure"
+  random-route: true
+  path: .
+  memory: 128M
+  env:
+    destinations: >
+      [
+        {
+          "name":"galactic_spacefarer_adventure",
+          "url":"https://app.cfapps.us10-001.hana.ondemand.com/",
+          "forwardAuthToken": true
+        }
+      ]
+
+  buildpacks:
+  - nodejs_buildpack
+  services:
+  - nodeuaa

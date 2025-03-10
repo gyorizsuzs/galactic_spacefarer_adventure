@@ -1,11 +1,14 @@
 const cds = require('@sap/cds');
+const { configDotenv } = require('dotenv');
 const nodemailer = require('nodemailer');
+require('dotenv').config;
 
 module.exports = class SpacefarerService extends cds.ApplicationService {
   init() {
     const { GalacticSpacefarers, IntergalacticDepartments, SpacefaringPositions } = cds.entities('SpacefarerService')
 
     this.before(['CREATE', 'UPDATE'], GalacticSpacefarers, async (req) => {
+      // console.log(req.user, req.user.is('admin'), req.user.is('authenticated'), req.user.attr.level);
       const { stardustCollection, wormholeNavigationSkill } = req.data;
 
       if (stardustCollection < 0 || wormholeNavigationSkill < 0) {
@@ -21,7 +24,7 @@ module.exports = class SpacefarerService extends cds.ApplicationService {
       const transporter = nodemailer.createTransport({
         host: 'sandbox.smtp.mailtrap.io',
         port: 2525,
-        auth: { user: '96d6ea00d65a2d', pass: '9da77ef093ae7f' }
+        auth: { user: process.env.USER, pass: process.env.PASS }
       });
 
       const mailOptions = {
@@ -34,8 +37,9 @@ module.exports = class SpacefarerService extends cds.ApplicationService {
       await transporter.sendMail(mailOptions);
     });
 
-    this.after('READ', GalacticSpacefarers, async (galacticSpacefarers, req) => {
-      console.log('After READ GalacticSpacefarers', galacticSpacefarers);
+    this.before('READ', GalacticSpacefarers, async (galacticSpacefarers, req) => {
+      console.log('Before READ GalacticSpacefarers', galacticSpacefarers.query.SELECT.limit);
+      // galacticSpacefarers.query.SELECT.limit.rows.val = Math.min(galacticSpacefarers.query.SELECT.limit.rows.val, 10);
     });
 
     return super.init()
