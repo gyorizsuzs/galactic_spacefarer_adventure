@@ -104,7 +104,6 @@ annotate service.GalacticSpacefarers with @(
         spacesuitColour,
         stardustCollection,
     ],
-UI.DeleteHidden : true,
 );
 
 annotate service.GalacticSpacefarers with {
