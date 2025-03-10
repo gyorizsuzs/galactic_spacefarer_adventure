@@ -121,8 +121,6 @@
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
                     "type": "ResponsiveTable",
-                    "growingMode": "Scroll",
-                    "growingTreshold": 10,
                     "enableAutoColumnWidth": false,
                     "showFullScreenButton": true,
                     "personalization": {

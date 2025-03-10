@@ -1,16 +1,16 @@
 ID,fullName,originPlanet,stardustCollection,wormholeNavigationSkill,spacesuitColour,department_ID,position_ID
-724dcb1b-ffce-4d88-be81-160466cb8fee,"Peter Jason Quill","Earth-616",564,97,"blue-red",2d100d3e-eb71-4832-a4bd-6a3a0f16886c,0e0bb5dd-ddba-4708-a48e-4c4c2c6896fc
+724dcb1b-ffce-4d88-be81-160466cb8fee,"Peter Jason Quill","Earth",564,97,"blue-red",2d100d3e-eb71-4832-a4bd-6a3a0f16886c,0e0bb5dd-ddba-4708-a48e-4c4c2c6896fc
 8cf9eddb-12f8-4ea7-b6fd-8b238ea6cace,"Gamora Zen Whoberi Ben Titan","Earth-7528",420,25,"purple",2d100d3e-eb71-4832-a4bd-6a3a0f16886c,939725d2-7203-4b03-9a85-490a0fa9a709
-94ad0490-67d8-40ac-8f1f-6a2952f3b894,"Rocket Racoon Subject 89P13","Earth-616",689,99,"red-bue",2d100d3e-eb71-4832-a4bd-6a3a0f16886c,335473c7-be34-46af-9b15-236d60fc8ec9
+94ad0490-67d8-40ac-8f1f-6a2952f3b894,"Rocket Racoon Subject 89P13","Earth",689,99,"red-bue",2d100d3e-eb71-4832-a4bd-6a3a0f16886c,335473c7-be34-46af-9b15-236d60fc8ec9
 8cf5d0ad-14dd-4239-b3bd-78991e906823,"Groot","Planet X",20,8,"brown-green",2d100d3e-eb71-4832-a4bd-6a3a0f16886c,b675f2a1-04a2-46a6-b886-533afca5ab35
 43f4408c-7f2e-4da4-bcf5-9980be41d2b0,"Yondu Udonta","Centauri-IV",793,98,"red",a6d76659-ccf2-4cde-a3c6-b14d7a5868f1,0e0bb5dd-ddba-4708-a48e-4c4c2c6896fc
-8d725d44-2874-4a61-bba9-ce43f8028bd0,"Cosmo","Earth-616",17,15,"white-red",e7723810-335f-4ad5-a0b5-cc29d3c8cb9d,ba51ed06-447e-4564-b363-eeb875884691
+8d725d44-2874-4a61-bba9-ce43f8028bd0,"Cosmo","Earth",17,15,"white-red",e7723810-335f-4ad5-a0b5-cc29d3c8cb9d,ba51ed06-447e-4564-b363-eeb875884691
 fc2f9aec-c771-4e42-8dd0-9fb0274ad6b0,"Mantis","Planet Y",0,0,"blue-red",a1fdeac1-cca7-4e1b-b41f-da199684723c,938393c8-ce87-4aca-a2f9-baee9cf89570
 ce335db3-7bd8-413b-ac52-aa07a9950748,"Drax the Distroyer","Mount Kylos",600,34,"blue-red",2d100d3e-eb71-4832-a4bd-6a3a0f16886c,b675f2a1-04a2-46a6-b886-533afca5ab35
 37cf0ceb-25c6-49f4-bd01-7267b634427b,"Thanos","Titan",322,54,"blue-gold",a23ef134-ed2c-490f-9a0d-ff5e0b34b49a,579b1dde-b249-41d3-aacd-a921fda0b1c2
 e39d5f58-a6d4-42d3-9b37-f0d78fbdc2c3,"Ronan the Accuser","Hala",263,25,"black-red",86a0a49d-5b4e-41b5-91da-82a14c36e6b9,579b1dde-b249-41d3-aacd-a921fda0b1c2
 7bc91528-e9be-427c-afda-7eb7b1c7969c,"Ayesha","The Sovereign",0,0,"gold",62f55e7f-1b0b-43d0-961b-512a72cd24ef,c2b75b24-3556-4fd8-b7df-e9dacec1a046
-8c999721-1d3f-43b4-b4c0-aa486dbb1b9a,"Kevin Bacon","Earth-616",0,0,"black",1c328bba-8d65-4c53-a391-10adab9a9399,33782536-1a19-47d6-a605-0ef64183d2b1
+8c999721-1d3f-43b4-b4c0-aa486dbb1b9a,"Kevin Bacon","Earth",0,0,"black",1c328bba-8d65-4c53-a391-10adab9a9399,33782536-1a19-47d6-a605-0ef64183d2b1
 3c6070f5-9f94-45a4-ac24-2a4b7de15b82,"Kraglin Obfonteri","Xandar",345,71,"red-black",8b9f24c6-0e7f-4f23-9d4b-5b12a6cfd58e,b675f2a1-04a2-46a6-b886-533afca5ab35
 7385326d-aa16-434f-a3bc-ca22fccd8e8d,"Korath","Hala",434,10,"black-red",86a0a49d-5b4e-41b5-91da-82a14c36e6b9,d2e7a5b9-3c4f-1d8c-91da-6a5b2e7f9d3a
 7e8d53be-e7db-4ddb-9d0f-6ab04c05f59d,"Taneleer Tivan","Knowhere",197,44,white-blue,c5f87d9a-3a24-4b57-9d8c-2e6a1b4d7f83,f4a7e2d9-5b3c-1d8c-9d8c-6a5b2e7f9d3a
@@ -21,3 +21,18 @@ ef77c690-467b-46af-88d5-a39a46ad66d1,"Martinex T’Naga","Pluto",347,52,silver,7
 33f7396e-9854-492a-99bd-4488cefb2282,"Taserface","Unknown",51,34,black,f1a3e7d2-5b4c-9d8c-04a2-6a2b5e7f3d4c,b675f2a1-04a2-46a6-b886-533afca5ab35
 14efddf0-b063-49e2-93a8-8aba2dd1e2f0,"Brahl","Unknown",206,94,white-blue,f1a3e7d2-5b4c-9d8c-04a2-6a2b5e7f3d4c,b675f2a1-04a2-46a6-b886-533afca5ab35
 a99d0c38-f3a4-4d57-9c36-5415355fd021,"Howard the Duck","Duckworld",328,24,silver,9f4a7e2b-5d3c-1d8c-9b3c-6a5f2e7b9d3a,d5e4a7f2-9b3c-1d8c-9b3c-6a5b2e7f9d3a
+8f4936d2-079b-4b65-a357-7d9dd59c7195,"Thor Odinson","Asgard",64,3,red-yellow,99b15e40-5870-43cf-bd39-440076952971,5a8698a3-1307-4940-a083-92db772e1312
+6de9698b-8687-498a-9a95-6da9b478c235,"Loki Laufeyson","Jotunheim",414,1,green-black,99b15e40-5870-43cf-bd39-440076952971,e4d8014e-85cb-4718-a35d-82aedef80510
+42b1eb06-b5c4-42e3-8f1b-e38aea9620c2,"Valkyrie","Asgard",466,88,green,99b15e40-5870-43cf-bd39-440076952971,f714c96e-2ca4-413d-ac77-db0e758d76a0
+1026184a-9b94-4a57-b012-40b866d226ee,"Nick Fury","Earth",9,234,black,fe116344-5a84-4f8b-8521-038fd73215e7,de8d73c9-89b5-44f5-9b52-b975f06ac3aa
+3a9a5212-b35b-4bf0-a441-1ed4452b61e4,"Tony Stark","Earth",613,37,red-gold,a4f1436d-53f9-40d6-86a7-bd0383ff70c4,2ee3ff44-67c8-4aa9-a1ab-f300e2f85bc8
+f20050fe-531c-4580-b1ad-1c8d0ecf259f,"Steve Rogers","Earth",32,76,blue-red-white,a4f1436d-53f9-40d6-86a7-bd0383ff70c4,034553a8-3995-4adb-af97-82919d5ea2b8
+b91579e2-906b-4958-8f9b-d41891242f5c,"Bruce Banner","Earth",423,12,purple,a4f1436d-53f9-40d6-86a7-bd0383ff70c4,2ee3ff44-67c8-4aa9-a1ab-f300e2f85bc8
+69129295-ee02-446c-9c7d-0bedecf8e58e,"Natasha Romanoff","Earth",656,87,black,a4f1436d-53f9-40d6-86a7-bd0383ff70c4,8ae82e67-1450-437c-9248-16c42fc6f7a8
+628014c6-9bfd-480d-b160-b6a07cd8691b,"Clint Barton","Earth",345,6,black,a4f1436d-53f9-40d6-86a7-bd0383ff70c4,b62124d8-e234-474c-b732-d3fc2b8c42aa
+d740917d-84c2-4272-a431-365653041bca,"Stephen Strange","Earth",72,54,green,a4f1436d-53f9-40d6-86a7-bd0383ff70c4,38c4d880-bbdf-4e6e-aed5-5371c6149aee
+2a2c28ed-30e9-4040-835f-d748c760f837,"Wanda Maximoff","Earth",12,7,scarlet,a4f1436d-53f9-40d6-86a7-bd0383ff70c4,61cbcbbb-f406-4824-829f-d98517896981
+2c2ddacb-bd49-43db-a97c-94fcc161bcfa,"Vision","Earth",330,0,yellow,a4f1436d-53f9-40d6-86a7-bd0383ff70c4,15230f85-6d05-4a5e-9ae0-31474f2356ca
+0dff13df-1912-4b9b-8ef4-a32e296a0e2e,"Scott Lang","Earth",0,0,blue,a4f1436d-53f9-40d6-86a7-bd0383ff70c4,999a3e51-b349-4c7b-b14d-14ed6ccf7446
+0567de6f-d823-49b3-8268-afa9dd6bc45d,"Hope van Dyne","Earth",6,31,red,a4f1436d-53f9-40d6-86a7-bd0383ff70c4,999a3e51-b349-4c7b-b14d-14ed6ccf7446
+0ef65a90-9167-4f7a-9f17-4c3f37bfe07c,"Shang-Chi","Earth",4,13,brow-red,c3c0ef66-078e-49f1-9e56-aefb2e2f08c5,3806b74b-b3c8-4647-984f-ede11ab89a0f

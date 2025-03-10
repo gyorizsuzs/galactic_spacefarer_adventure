@@ -37,8 +37,8 @@ module.exports = class SpacefarerService extends cds.ApplicationService {
       await transporter.sendMail(mailOptions);
     });
 
-    this.before('READ', GalacticSpacefarers, async (galacticSpacefarers, req) => {
-      console.log('Before READ GalacticSpacefarers', galacticSpacefarers.query.SELECT.limit);
+    this.before('READ', GalacticSpacefarers, async (req) => {
+      console.log('Before READ GalacticSpacefarers', req.query.SELECT.limit);
       // galacticSpacefarers.query.SELECT.limit.rows.val = Math.min(galacticSpacefarers.query.SELECT.limit.rows.val, 10);
     });
 
