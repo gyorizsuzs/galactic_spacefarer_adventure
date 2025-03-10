@@ -37,11 +37,6 @@ module.exports = class SpacefarerService extends cds.ApplicationService {
       await transporter.sendMail(mailOptions);
     });
 
-    this.before('READ', GalacticSpacefarers, async (req) => {
-      console.log('Before READ GalacticSpacefarers', req.query.SELECT.limit);
-      // galacticSpacefarers.query.SELECT.limit.rows.val = Math.min(galacticSpacefarers.query.SELECT.limit.rows.val, 10);
-    });
-
     return super.init()
   }
 }
