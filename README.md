@@ -1,12 +1,12 @@
 # Welcome
 
-# Prerequisites
+1. Prerequisites
 
 Ensure you have the following installed:
 	•	Node.js (LTS version recommended)
 	•	SAP CAP (cds)
 
-# Install Dependencies
+2. Install Dependencies
 
 npm install
 cd app/galactic_spacefarer_adventures
@@ -17,6 +17,6 @@ npm install
 cd ../../
 cds watch
 
-# Authorisation
+3. Authorisation
 
 Authorisation is currently mocked
